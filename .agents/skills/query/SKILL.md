@@ -15,7 +15,6 @@ To conduct complex research and synthesis strictly against a local wiki knowledg
 # 📥 Input Specifications
 - **User Query:** The specific research question or topic.
 - **Output Format Request (Optional):** Explicit requests for specific derived artifacts (e.g., Marp markdown presentation, Python `matplotlib` script).
-- **Target Context Map:** [TBD: User to confirm max token limit or specific search heuristic to prevent context overflow when reading the wiki].
 
 # ⚙️ Execution Instructions (Workflow)
 1. **Map Knowledge Base:** Read `index.md` to identify the core concepts and file paths relevant to the user's query.

@@ -63,4 +63,4 @@ To systematically process uningested raw source files, extract their core argume
 - `wiki/concepts/`: Directory for isolated, atomic concept pages.
 - `index.md`: The central directory and routing page for the wiki.
 - `log.md`: The ledger tracking all historical file ingestions.
-- `AGENTS.md`: [TBD: User to confirm path/existence] Reference file dictating styling conventions, titles, and relative linking rules.
+- `AGENTS.md`: Reference file dictating styling conventions, titles, and relative linking rules.
