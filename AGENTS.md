@@ -12,6 +12,12 @@ This document defines the schema, structure, and operations for this LLM-maintai
 For detailed rules and guidelines, refer to the following documents:
 - [File Structure & Conventions](docs/file-structure.md): Rules for creating, linking, and organizing files.
 
+## 🛑 Critical Constraints
+
+- **No WikiLinks**: ALWAYS use standard Markdown relative links (e.g., `[Title](../concepts/File.md)`). DO NOT use `[[WikiLinks]]`.
+- **Absolute Paths**: When using tools, always use absolute paths provided in the environment.
+- **Immutable Raw**: NEVER modify files in the `raw/` directory.
+
 ## Operations (Agent Skills)
 
 The wiki is maintained using specific agent skills. Please use the relevant skill when performing operations:
