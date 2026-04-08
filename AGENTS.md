@@ -43,6 +43,6 @@ When you ask the LLM to "lint the wiki" or "health-check":
 ## File Structure Conventions
 
 - All wiki pages should have a clear descriptive title.
-- Link between pages using relative markdown paths.
+- Link between pages using relative markdown paths. CRITICAL: Do NOT use Obsidian-style `[[WikiLinks]]`. ALL links must be formatted as standard Markdown relative paths (e.g., `[Title](../concepts/Concept_Name.md)`).
 - All generated files (summaries, derived outputs, analyses) MUST be placed in designated subdirectories (e.g., `wiki/`, `outputs/`), and never directly in the project root.
 - Avoid deleting history unless instructed; prefer to update and document evolving understanding.
