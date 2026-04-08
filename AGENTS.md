@@ -4,45 +4,18 @@ This document defines the schema, structure, and operations for this LLM-maintai
 
 ## Core Principles
 
-1. **Raw Sources (`raw/`)**: Immutable files (papers, articles, transcripts). The LLM reads these but NEVER modifies them.
-2. **The Wiki**: A structured collection of markdown files maintained entirely by the LLM. 
-3. **The Schema (`AGENTS.md`)**: The configuration file that dictates conventions and workflows (this file).
+- **Raw Sources (`raw/`)**: Immutable files (papers, articles, transcripts). The LLM reads these but NEVER modifies them.
+- **The Wiki**: A structured collection of markdown files maintained entirely by the LLM.
 
-## Operations
+## Documentation
 
-### 1. Ingesting New Sources
+For detailed rules and guidelines, refer to the following documents:
+- [File Structure & Conventions](docs/file-structure.md): Rules for creating, linking, and organizing files.
 
-When you add a new source to `raw/` and ask the LLM to process it, the LLM will:
+## Operations (Agent Skills)
 
-- Read the source and discuss key takeaways with you if instructed.
-- Write a dedicated summary page for it in the `wiki/` directory.
-- Update `index.md` with a link to the new page and a one-line summary.
-- Update any relevant entity or concept pages logically connected to this source.
-- Append an ingest entry to `log.md`.
+The wiki is maintained using specific agent skills. Please use the relevant skill when performing operations:
 
-### 2. Querying the Wiki
-
-When you ask a complex question:
-
-- The LLM will first read `index.md` to discover relevant pages.
-- It will read those specific pages.
-- It will synthesize an answer, heavily referencing existing wiki knowledge.
-- Render outputs as standard Markdown, or if requested by the user, as Derived Outputs (e.g., Marp slide decks, matplotlib charts).
-- If the synthesis is highly valuable, the LLM will propose filing it back into the wiki as a new concept/analysis page. Every exploration adds up!
-
-### 3. Linting and Maintenance
-
-When you ask the LLM to "lint the wiki" or "health-check":
-
-- It will check for contradictions between pages.
-- It will flag orphan pages (no inbound links).
-- It will check for missing cross-references and ensure overall semantic consistency.
-- It will impute missing information via web search.
-- It will actively find connections between concepts to suggest new articles.
-
-## File Structure Conventions
-
-- All wiki pages should have a clear descriptive title.
-- Link between pages using relative markdown paths. CRITICAL: Do NOT use Obsidian-style `[[WikiLinks]]`. ALL links must be formatted as standard Markdown relative paths (e.g., `[Title](../concepts/Concept_Name.md)`).
-- All generated files (summaries, derived outputs, analyses) MUST be placed in designated subdirectories (e.g., `wiki/`, `outputs/`), and never directly in the project root.
-- Avoid deleting history unless instructed; prefer to update and document evolving understanding.
+- **[Ingest](.agents/skills/ingest/SKILL.md)**: Process new files in `raw/`, write summaries, and extract concepts.
+- **[Query](.agents/skills/query/SKILL.md)**: Query the local wiki index to synthesize knowledge and answer complex questions.
+- **[Lint](.agents/skills/lint/SKILL.md)**: Health-check the wiki for consistency, orphan pages, and contradictions.
