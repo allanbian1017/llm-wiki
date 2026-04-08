@@ -53,3 +53,7 @@ Use /lint to health-check the wiki
 ## Built With
 
 This project relies on AI agent workflows (as documented in `AGENTS.md` and the existing Skills) and can seamlessly integrate with standard Markdown-based knowledge management systems like Obsidian. Local settings for such external editors are ignored via `.gitignore` to maintain a clean repository.
+
+## Inspiration
+
+This project is inspired by Andrej Karpathy's LLM wiki thought. You can read the original thought process [here](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
