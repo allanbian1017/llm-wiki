@@ -8,8 +8,6 @@ This is the central catalog of everything in the wiki. It is updated by the LLM 
 - [log.md](./log.md) - The chronological log of all changes.
 - [AGENTS.md](./AGENTS.md) - The underlying rules and operations for the LLM.
 
-### Entities
-
 ### Concepts
 
 ### Sources

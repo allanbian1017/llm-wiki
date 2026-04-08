@@ -13,7 +13,7 @@ This repository maintains strict separation between **immutable source files** a
 - **`index.md`**: The central catalog where the LLM records all entities, concepts, and source summaries. It serves as the entry point for navigating the synthesized knowledge.
 - **`log.md`**: The chronological ingestion log that tracks what the LLM has processed and added to the wiki.
 - **`AGENTS.md`**: The foundational schema and configuration rulebook that instructs the LLM on how to manage, maintain, and structure the wiki.
-- **`.agents/` & `.gemini/`**: Hidden directories containing the workflows and skills (e.g., `ingest`, `query`, `lint`) that power the AI agent's operations.
+- **`.agents/`**: Hidden directories containing the workflows and skills (e.g., `ingest`, `query`, `lint`) that power the AI agent's operations.
 
 ## How to Use this Wiki
 
