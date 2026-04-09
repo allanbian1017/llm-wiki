@@ -25,3 +25,12 @@ The wiki is maintained using specific agent skills. Please use the relevant skil
 - **[Ingest](.agents/skills/ingest/SKILL.md)**: Process new files in `raw/`, write summaries, and extract concepts.
 - **[Query](.agents/skills/query/SKILL.md)**: Query the local wiki index to synthesize knowledge and answer complex questions.
 - **[Lint](.agents/skills/lint/SKILL.md)**: Health-check the wiki for consistency, orphan pages, and contradictions.
+
+## Log Rules
+
+Every `ingest` entry in `log.md` MUST include a Markdown link to the corresponding summary page.
+See [File Structure & Conventions](docs/file-structure.md#log-conventions-logmd) for the required format.
+
+## Schema Changes
+
+When a structural rule is introduced or updated (e.g., a new required field in `log.md`), apply it **retroactively** to all existing entries unless explicitly told otherwise.
