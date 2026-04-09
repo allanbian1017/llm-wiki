@@ -21,3 +21,9 @@ This document outlines the required file locations and linking conventions for t
 
 - Avoid deleting history unless instructed; prefer to update and document evolving understanding.
 - Ensure all wiki pages have a clear, descriptive title.
+
+## Log Conventions (`log.md`)
+
+- Every `ingest` entry MUST include a relative Markdown link to its corresponding summary page.
+- **Required format:** `## [YYYY-MM-DD] ingest | [Source Title](wiki/summaries/<filename>.md)`
+- `lint` and `setup` entries do not require a link.

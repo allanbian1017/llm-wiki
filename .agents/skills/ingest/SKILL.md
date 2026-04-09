@@ -48,7 +48,8 @@ To systematically process uningested raw source files, extract their core argume
      - *If it does NOT exist:* Create `wiki/concepts/<concept name>.md` containing the concept definition and a backlink to the source summary page.
 
    - **e. Log Action:**
-     - Append an entry to `log.md` using the exact format: `## [YYYY-MM-DD] ingest | [Exact File Name]`.
+     - Append an entry to `log.md` using the exact format: `## [YYYY-MM-DD] ingest | [Exact File Name](wiki/summaries/<summary_filename>.md)`.
+     - The source title MUST be a relative Markdown link pointing to the newly created summary page in `wiki/summaries/`.
      - Ensure the file name exactly matches the item in `raw/` to prevent duplicate future ingestions.
 
 # 📤 Output Specifications
