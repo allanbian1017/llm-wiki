@@ -17,6 +17,7 @@ For detailed rules and guidelines, refer to the following documents:
 - **No WikiLinks**: ALWAYS use standard Markdown relative links (e.g., `[Title](../concepts/File.md)`). DO NOT use `[[WikiLinks]]`.
 - **Absolute Paths**: When using tools, always use absolute paths provided in the environment.
 - **Immutable Raw**: NEVER modify files in the `raw/` directory.
+- **Link Verification**: ALWAYS verify the existence of concept files in `wiki/concepts/` before linking. If a concept is important but missing, create it immediately rather than using a placeholder or incorrect link.
 
 ## Operations (Agent Skills)
 
@@ -25,6 +26,7 @@ The wiki is maintained using specific agent skills. Please use the relevant skil
 - **[Ingest](.agents/skills/ingest/SKILL.md)**: Process new files in `raw/`, write summaries, and extract concepts.
 - **[Query](.agents/skills/query/SKILL.md)**: Query the local wiki index to synthesize knowledge and answer complex questions.
 - **[Lint](.agents/skills/lint/SKILL.md)**: Health-check the wiki for consistency, orphan pages, and contradictions.
+- **Atomic Operations**: Every turn that results in a new file in `wiki/concepts/` or `wiki/summaries/` MUST conclude with an update to `index.md` and `log.md` before the turn ends.
 
 ## Log Rules
 
